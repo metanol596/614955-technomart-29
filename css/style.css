@@ -1,0 +1,52 @@
+/* Variables */
+
+:root {
+  --basic-white: #fff;
+  --basic-black: #000;
+  --basic-extra-white: rgba(0, 0, 0, 0.0001);
+  --basic-neutral: #f1f5f7;
+  --basic-extra-light: #F3F7F9;
+  --basic-light-grey: #EAEAEA;
+  --basic-dark-silver: #32425C;
+  --basic-extra-red: #EE3643;
+  --basic-purple: #DC91D8;
+  --basic-blue:#3BBCE3;
+  --basic-light-blue: #F1F5F7;
+  --basic-dark-blue: #32425C;
+  --basic-darker-blue: #293449;
+  --basic-green: #63A63E;
+  --basic-light-green: #8ED78F;
+  --basic-light-yellow: #FFC047;
+  --basic-dark-yellow: #FFBF47;
+  --basic-light-golden: #FFD180;
+  --basic-lighter-golden: #FFDA96;
+
+  --special-white: rgba(255, 255, 255, 0.5);
+  --special-dark-blue: #1D2739;
+  --special-dark-red: #CA2C37;
+  --special-darker-red: #BA2732;
+  --special-greylight: #C5C5C5;
+  --special-greydark: #A9A9A9;
+  --special-dark-green: #5FBB2D;
+  --special-darker-green: #518534;
+}
+
+/* Global */
+
+body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", sans-serif, Arial;
+  font-style: normal;
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
