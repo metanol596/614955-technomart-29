@@ -2,7 +2,7 @@
 
 :root {
   --basic-white: #fff;
-  --basic-extra-white: rgba(255, 255, 255, 0.3);
+  --basic-extra-grey: rgba(255, 255, 255, 0.3);
   --basic-black: #000;
   --basic-extra-white: rgba(0, 0, 0, 0.0001);
   --basic-neutral: #f1f5f7;
@@ -21,6 +21,8 @@
   --basic-dark-yellow: #FFBF47;
   --basic-light-golden: #FFD180;
   --basic-lighter-golden: #FFDA96;
+  --basic-light-brown: #a87751;
+  --basic-beige: #F9F5F0;
 
   --special-white: rgba(255, 255, 255, 0.5);
   --special-dark-blue: #1D2739;
@@ -28,7 +30,9 @@
   --special-dark-red: #CA2C37;
   --special-darker-red: #BA2732;
   --special-greylight: #C5C5C5;
-  --special-greydark: #A9A9A9;
+  --special-extra-greylight: rgba(197, 197, 197, 0.3);
+  --special-greydark: rgba(169, 169, 169, 0.3);
+  --special-greydarker: #a9a9a9;
   --special-dark-green: #5FBB2D;
   --special-darker-green: #518534;
 }
@@ -221,5 +225,144 @@ img {
   font-size: 14px;
   line-height: 18px;
 
-  background-color: var(--basic-extra-white);
+  background-color: var(--basic-extra-grey);
+}
+
+.subtitle-link:hover {
+  background-color: var(--special-extra-greylight);
+}
+.subtitle-link:active {
+  background-color: var(--special-greydark);
+}
+
+.carousel {
+  background-color: var(--basic-light-brown);
+}
+
+.carousel-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.carousel-link {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+
+  background-color: var(--basic-extra-red);
+}
+
+.carousel-link:hover {
+  background-color: var(--special-dark-red);
+}
+
+.carousel-link:active {
+  background-color: var(--special-darker-red);
+}
+
+/* popular-products */
+
+.popular-products-row {
+  background-color: var(--basic-beige);
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-dark-blue);
+}
+
+.all-popular {
+  background-color: var(--basic-extra-red);
+
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.popular-list {
+  list-style: none;
+}
+
+.popular-item {
+  background-color: var(--basic-white);
+
+  border: 1px solid var(--basic-light-grey);
+}
+
+.popular-image-perforator {
+  background-color: var(--basic-dark-blue);
+}
+
+.card-link {
+  font-family: "PT Sans", sans-serif, Tahoma;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  color: var(--basic-black);
+}
+
+.price-delete {
+  font-family: "PT Sans", sans-serif, Tahoma;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--special-greydarker);
+}
+
+.real-price {
+  font-family: "PT Sans", sans-serif, Tahoma;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--basic-white);
+
+  background-color: var(--basic-extra-red);
+}
+
+.add-basket-button {
+  background-color: var(--basic-green);
+
+  color: var(--basic-white);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+
+  border-radius: 2px;
+}
+
+.add-basket-button:hover {
+  background-color: var(--special-dark-green);
+}
+
+.add-basket-button:active {
+  background-color: var(--special-darker-green);
+}
+
+.add-bookmark-button {
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+
+  color: var(--basic-dark-blue);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+
+  background-color: transparent;
+}
+
+.add-bookmark-button:hover {
+  border: 3px solid var(--basic-dark-blue);
+}
+
+.add-bookmark-button:active {
+  border: 3px solid var(--basic-dark-blue);
+  opacity: 0.5;
 }
