@@ -167,6 +167,16 @@ img {
   background-color: var(--special-darker-red);
 }
 
+.search-field {
+  background-color: var(--basic-darker-blue);
+
+  border: none;
+}
+
+.search-field::placeholder {
+  color: var(--basic-white);
+}
+
 .search-field:active {
   background-color: var(--basic-white);
 
