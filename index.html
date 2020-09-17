@@ -10,10 +10,10 @@
     <header class="main-header">
       <div class="header-row-container">
         <a class="main-header-logo">Техномарт</a>
-        <p class="search-field">Поиск:</p>
-        <a class="bookmarks">Закладки: 0</a>
-        <a class="cart">Корзина: 0</a>
-        <a class="ordering">Оформить заказ</a>
+        <input class="search-field" type="search" name="search-field" placeholder="Поиск:">
+        <a class="bookmarks" href="#">Закладки: 0</a>
+        <a class="cart" href="#">Корзина: 0</a>
+        <a class="ordering" href="#">Оформить заказ</a>
       </div>
       <div class="header-flex-container">
         <p class="site-description-text">
@@ -33,7 +33,7 @@
       <nav class="main-navigation">
         <ul class="site-navigation">
           <li class="site-navigation-item">
-            <a class="site-navigation-link" href="blank.html">Главная</a>
+            <a class="site-navigation-link">Главная</a>
           </li>
           <li class="site-navigation-item">
             <a class="site-navigation-link" href="blank.html">Компания</a>
@@ -117,8 +117,8 @@
             <del class="price-delete">32500 Р.</del>
             <span class="real-price">25500 Р.</span>
             <div class="hover-buttons">
-              <button class="add-basket-button" type="button">купить</button>
-              <button class="add-bookmark-button" type="button">в закладки</button>
+              <a class="add-basket-button">купить</a>
+              <a class="add-bookmark-button">в закладки</a>
             </div>
           </li>
           <li class="popular-item">
@@ -131,8 +131,8 @@
             <span class="real-price">15500 Р.</span>
             <div class="hover-buttons">
               <span class="product-label">new</span>
-              <button class="add-basket-button" type="button">купить</button>
-              <button class="add-bookmark-button" type="button">в закладки</button>
+              <a class="add-basket-button">купить</a>
+              <a class="add-bookmark-button">в закладки</a>
             </div>
           </li>
           <li class="popular-item">
@@ -143,8 +143,8 @@
             <del class="price-delete">30500 Р.</del>
             <span class="real-price">25500 Р.</span>
             <div class="hover-buttons">
-              <button class="add-basket-button" type="button">купить</button>
-              <button class="add-bookmark-button" type="button">в закладки</button>
+              <a class="add-basket-button">купить</a>
+              <a class="add-bookmark-button">в закладки</a>
             </div>
           </li>
           <li class="popular-item">
@@ -156,8 +156,8 @@
             <del class="price-delete">22500 Р.</del>
             <span class="real-price">12500 Р.</span>
             <div class="hover-buttons">
-              <button class="add-basket-button" type="button">купить</button>
-              <button class="add-bookmark-button" type="button">в закладки</button>
+              <a class="add-basket-button">купить</a>
+              <a class="add-bookmark-button">в закладки</a>
             </div>
           </li>
         </ul>
@@ -218,7 +218,7 @@
         </p>
         <div class="slider">
           <div class="slider-buttons-block">
-            <button class="slider-button" type="button">Доставка</button>
+            <button class="slider-button active" type="button">Доставка</button>
             <button class="slider-button" type="button">Гарантия</button>
             <button class="slider-button" type="button">Кредит</button>
           </div>

@@ -72,6 +72,8 @@
 /* Variables */
 
 :root {
+  /* colors */
+
   --basic-white: #fff;
   --basic-extra-grey: rgba(255, 255, 255, 0.3);
   --basic-black: #000;
@@ -106,6 +108,10 @@
   --special-greydarker: #a9a9a9;
   --special-dark-green: #5FBB2D;
   --special-darker-green: #518534;
+
+  /* fonts */
+
+  --extra-font: "PT Sans", sans-serif, Tahoma;
 }
 
 /* Global */
@@ -167,6 +173,17 @@ img {
   color: var(--basic-black);
 }
 
+.search-field:focus {
+  background-color: var(--basic-white);
+
+  color: var(--basic-black);
+}
+
+.bookmarks,
+.cart {
+  color: var(--basic-white);
+}
+
 .bookmarks:active,
 .cart:active {
   background-color: var(--special-darker-blue);
@@ -175,6 +192,8 @@ img {
 }
 
 .ordering {
+  color: var(--basic-white);
+
   background-color: var(--basic-green);
 }
 
@@ -245,16 +264,16 @@ img {
   list-style: none;
 }
 
-.site-navigation-item:hover {
+.site-navigation-link {
+  color: var(--basic-white);
+}
+
+.site-navigation-link:hover {
   background-color: var(--basic-darker-blue);
 }
 
-.site-navigation-item:active {
+.site-navigation-link:active {
   opacity: 0.5;
-}
-
-.site-navigation-link {
-  color: var(--basic-white);
 }
 
 /* offers */
@@ -309,6 +328,12 @@ img {
 
 .carousel {
   background-color: var(--basic-light-brown);
+}
+
+.control-right-button,
+.control-left-button,
+.carousel-button {
+  cursor: pointer;
 }
 
 .carousel-title {
@@ -380,7 +405,7 @@ img {
 }
 
 .card-link {
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -388,7 +413,7 @@ img {
 }
 
 .price-delete {
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -397,7 +422,7 @@ img {
 }
 
 .real-price {
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -456,10 +481,14 @@ img {
 .producer-item {
   border: 1px solid var(--basic-light-grey);
 
-  background-color: transparent;
+  background-color: var(--basic-extra-white);
 }
 
-.producer-item:active {
+.producer-link {
+  display: block;
+}
+
+.producer-link:active {
   opacity: 0.5;
 }
 
@@ -472,6 +501,17 @@ img {
   line-height: 30px;
 
   background-color: var(--basic-dark-blue);
+  cursor: pointer;
+}
+
+.slider-button.active {
+  color: var(--basic-darker-blue);
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+
+  pointer-events: none;
+  background-color: var(--basic-white);
 }
 
 .slider-button:hover {
@@ -492,7 +532,7 @@ img {
   width: 400px;
 
   color: var(--basic-black);
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 13px;
   line-height: 24px;
 }
@@ -506,7 +546,7 @@ img {
 
 .slider-item-description {
   color: var(--basic-black);
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 13px;
   line-height: 24px;
 }
@@ -549,7 +589,7 @@ img {
 
 .about-company-text {
   color: var(--basic-black);
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 13px;
   line-height: 24px;
 
@@ -584,7 +624,7 @@ img {
 }
 
 .contacts-text {
-  font-family: "PT Sans", sans-serif, Tahoma;
+  font-family: var(--extra-font);
   font-size: 13px;
   line-height: 24px;
 
