@@ -62,29 +62,27 @@
       <h1 class="visually-hidden">Интернет-магазин "Техномарт"</h1>
       <section class="offers">
         <h2 class="visually-hidden">Предложения</h2>
-        <ul class="offers-list">
-          <li class="offer-item">
-            <span class="product-label">new</span>
-            <h3 class="offer-title">Материалы</h3>
-            <a class="subtitle-link" href="blank.html">На любой вкус</a>
-          </li>
-          <li class="offer-item">
-            <h3 class="offer-title">Инструмент</h3>
-            <a class="subtitle-link" href="blank.html">На все случаи</a>
-          </li>
-          <li class="offer-item">
-            <h3 class="offer-title">Техника</h3>
-            <a class="subtitle-link" href="blank.html">Для стройки</a>
-          </li>
-          <li class="offer-item">
-            <h3 class="offer-title">Скидки 50%</h3>
-            <a class="subtitle-link" href="blank.html">На 350 товаров</a>
-          </li>
-          <li class="offer-item">
-            <h3 class="offer-title">Доставка</h3>
-            <a class="subtitle-link" href="blank.html">Бесплатно</a>
-          </li>
-        </ul>
+        <div class="offer-item">
+          <span class="product-label">new</span>
+          <h3 class="offer-title">Материалы</h3>
+          <a class="subtitle-link" href="blank.html">На любой вкус</a>
+        </div>
+        <div class="offer-item">
+          <h3 class="offer-title">Инструмент</h3>
+          <a class="subtitle-link" href="blank.html">На все случаи</a>
+        </div>
+        <div class="offer-item">
+          <h3 class="offer-title">Техника</h3>
+          <a class="subtitle-link" href="blank.html">Для стройки</a>
+        </div>
+        <div class="offer-item">
+          <h3 class="offer-title">Скидки 50%</h3>
+          <a class="subtitle-link" href="blank.html">На 350 товаров</a>
+        </div>
+        <div class="offer-item">
+          <h3 class="offer-title">Доставка</h3>
+          <a class="subtitle-link" href="blank.html">Бесплатно</a>
+        </div>
         <div class="carousel">
           <button class="control-right-button" type="button">стрелка влево</button>
           <button class="control-left-button" type="button">стрелка вправо</button>
@@ -253,37 +251,41 @@
           </div>
         </div>
       </section>
-      <section class="about-company">
-        <h2 class="section-title about-company">КОМПАНИЯ «Техномарт»</h2>
-        <p class="about-company-text">
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
-          ремонта и строительства не оставит равнодушными любителей сэкономить на
-          гастарбайтерах.
-        </p>
-        <p class="about-company-text">Мы можем доставить ваш товар в самые отдаленные точки России!</p>
-        <p class="about-company-text">Техномарт работает со многими транспортными компаниями:</p>
-        <ul class="transport-company-list">
-          <li class="transport-company-item">Деловые линии</li>
-          <li class="transport-company-item">Автотрейдинг</li>
-          <li class="transport-company-item">ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="more-about-company" href="blank.html">Подробнее о компании</a>
-      </section>
-      <section class="contacts">
-        <h2 class="section-title contacts-title">КОНТАКТЫ</h2>
-        <p class="contacts-text">
-          Вы можете забрать товар сами,
-          заехав в наш офис:
-        </p>
-        <a class="contacts-map" href="#">
-          <img class="contacts-map-image" src="img/map.jpg" width="300" height="158" alt="Карта расположения магазина по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-        </a>
-        <a class="contacts-help-field" href="blank.html">Заблудились? Напишите нам!</a>
-      </section>
+      <div class="index-columns">
+        <section class="about-company">
+          <h2 class="section-title about-company">КОМПАНИЯ «Техномарт»</h2>
+          <p class="about-company-text">
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для
+            ремонта и строительства не оставит равнодушными любителей сэкономить на
+            гастарбайтерах.
+          </p>
+          <p class="about-company-text">Мы можем доставить ваш товар в самые отдаленные точки России!</p>
+          <p class="about-company-text">Техномарт работает со многими транспортными компаниями:</p>
+          <ul class="transport-company-list">
+            <li class="transport-company-item">Деловые линии</li>
+            <li class="transport-company-item">Автотрейдинг</li>
+            <li class="transport-company-item">ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="more-about-company" href="blank.html">Подробнее о компании</a>
+        </section>
+        <section class="contacts">
+          <h2 class="section-title contacts-title">КОНТАКТЫ</h2>
+          <p class="contacts-text">
+            Вы можете забрать товар сами,
+            заехав в наш офис:
+          </p>
+          <a class="contacts-map" href="#">
+            <img class="contacts-map-image" src="img/map.jpg" width="300" height="158" alt="Карта расположения магазина по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+          </a>
+          <a class="contacts-help-field" href="blank.html">Заблудились? Напишите нам!</a>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="footer-navigation-block">
-        <a class="footer-logo">Техномарт</a>
+        <a class="footer-logo">
+          <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
+        </a>
         <ul class="footer-navigation">
           <li class="footer-navigation-item">
             <a class="footer-navigation-link footer-navigation-white" href="blank.html">Компания</a>
