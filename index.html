@@ -9,9 +9,9 @@
   <body>
     <header class="main-header">
       <div class="header-row-container">
-        <div class="container">
+        <div class="container header-inner-wrap">
           <a class="main-header-logo">
-            <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
+            <img class="logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
           </a>
           <input class="search-field" type="search" name="search-field" placeholder="Поиск:">
           <a class="bookmarks" href="#">Закладки: 0</a>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="header-flex-container">
-        <div class="container">
+        <div class="container header-inner-container">
           <p class="site-description-text">
             Интернет-магазин
             строительных материалов
@@ -39,7 +39,7 @@
       <nav class="main-navigation container">
         <ul class="site-navigation">
           <li class="site-navigation-item">
-            <a class="site-navigation-link">Главная</a>
+            <a class="site-navigation-link navigation-link-index">Главная</a>
           </li>
           <li class="site-navigation-item">
             <a class="site-navigation-link" href="blank.html">Компания</a>
@@ -57,7 +57,7 @@
             <a class="site-navigation-link" href="blank.html">Доставка</a>
           </li>
           <li class="site-navigation-item">
-            <a class="site-navigation-link" href="blank.html">Контакты</a>
+            <a class="site-navigation-link navigation-link-contacts" href="blank.html">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -169,7 +169,7 @@
       <section class="popular-producers container">
         <div class="popular-producers-row">
           <h2 class="section-title">популярные производители</h2>
-          <a class="all-popular" href="blank.html">все популярные производители</a>
+          <a class="all-popular" href="blank.html">все производители</a>
         </div>
         <ul class="producers-list">
           <li class="producer-item">
@@ -288,11 +288,17 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container">
-        <div class="footer-navigation-block">
+      <div class="container main-footer-wrap">
+        <div class="footer-inner-wrap">
           <a class="footer-logo">
-            <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
+            <img class="logo-img" src="img/logo-technomart2.svg" width="138" height="23" alt="Логотип сайта Техномарт">
           </a>
+          <div class="footer-contacts-block">
+            <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </div>
+        </div>
+        <div class="footer-navigation-block">
           <ul class="footer-navigation">
             <li class="footer-navigation-item">
               <a class="footer-navigation-link footer-navigation-white" href="blank.html">Компания</a>
@@ -325,13 +331,9 @@
             </li>
           </ul>
         </div>
-        <div class="footer-contacts-block">
-          <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-        </div>
       </div>
       <div class="footer-inner-block">
-        <div class="container">
+        <div class="container down-row-wrap">
           <p class="copyright">
             &#169; 2010–2019 Компания «Техномарт»<br>
             Все права защищены
@@ -347,13 +349,15 @@
               <a class="social-button" href="https://instagram.com">Инстаграм</a>
             </li>
           </ul>
-          <div class="feedback-block">
-            <span class="feedback-block-text">Обратная связь:</span>
-            <a class="feedback-block-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </div>
-          <div class="develop">
-            <span class="develop-text">Разработано —</span>
-            <a class="develop-site" href="https://htmlacademy.ru">htmlacademy.ru</a>
+          <div class="feedback-wrap">
+            <div class="feedback-block">
+              <span class="feedback-block-text">Обратная связь:</span>
+              <a class="feedback-block-email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </div>
+            <div class="develop">
+              <span class="develop-text">Разработано —</span>
+              <a class="develop-site" href="https://htmlacademy.ru">htmlacademy.ru</a>
+            </div>
           </div>
         </div>
       </div>
