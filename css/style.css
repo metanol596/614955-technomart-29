@@ -1114,23 +1114,38 @@ img {
 
 .slider-wrapper-1 {
   background-image: url("../img/car.png");
-  background-position: 100%;
+  background-position: 100% 22px;
 }
 
 .slider-wrapper-2 {
   background-image: url("../img/medal.png");
-  background-position: 100%;
+  background-position: 100% 22px;
 }
 
 .slider-wrapper-3 {
   background-image: url("../img/money.png");
-  background-position: 100%;
+  background-position: 100% 22px;
 }
 
 .slider-buttons-block {
   display: flex;
   flex-direction: column;
   margin-right: 80px;
+  position: relative;
+}
+
+.slider-buttons-block::before {
+  content: "";
+  width: 10px;
+  height: 279px;
+  position: absolute;
+  left: 230px;
+  top: -49px;
+
+  background-image: url("../img/shadow-line.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 10px 279px;
 }
 
 .slider-button {
