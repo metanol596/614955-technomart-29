@@ -117,7 +117,11 @@
   --special-dark-green: #5FBB2D;
   --special-darker-green: #518534;
 
+  --home-icon-color: #C1C6CE;
+
   --r: 0;
+  --g: 0;
+  --b: 0;
 
   /* fonts */
 
@@ -443,20 +447,96 @@ img {
 .private-block {
   background-color: var(--basic-white);
 
-  width: 299px;
   height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 17px;
+}
+
+.private-name-wrap {
+  display: flex;
+  margin-right: 20px;
+}
+
+.user-icon-container {
+  margin-right: 21px;
+  height: 18px;
 }
 
 .private-name {
-  margin-right: 20px;
+  order: 1;
 }
 
 .private-name,
 .exit-button {
   color: var(--basic-black);
+}
+
+.user-icon {
+  fill: var(--special-greylight);
+
+  width: 20px;
+  height: 18px;
+}
+
+.private-name:hover + .user-icon-container .user-icon {
+  fill: var(--basic-grey);
+}
+
+.private-name:active + .user-icon-container .user-icon {
+  fill: var(--special-greylight);
+}
+
+.exit-button {
+  display: inline-block;
+}
+
+.logout-icon {
+  fill: var(--special-greylight);
+}
+
+.logout-icon:hover {
+  fill: var(--basic-grey);
+}
+
+.logout-icon:active {
+  fill: var(--special-greylight);
+}
+
+.private-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.private-wrap:hover::before {
+  background-color: var(--basic-extra-red);
+}
+
+.private-wrap:active::before {
+  background-color: var(--special-greylight);
+}
+
+.private-wrap::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 133px;
+  border-radius: 50%;
+
+  background-color: var(--basic-dark-blue);
+  background-size: 4px 4px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.my-orders {
+  margin-right: 33px;
 }
 
 .my-orders,
@@ -669,7 +749,7 @@ img {
 }
 
 .new::before {
-  transform: translate(205px, -13px) rotate(45deg);
+  transform:  rotate(45deg) translate(138px, -155px);
 }
 
 .new-current::before {
@@ -743,7 +823,7 @@ img {
 .control-left-button,
 .carousel-button {
   cursor: pointer;
-  background-color: rgba(var(--r), var(--r), var(--r), 0);
+  background-color: rgba(var(--r), var(--g), var(--b), 0);
 
   border: none;
 }
@@ -898,16 +978,20 @@ img {
 
 .popular-item:hover {
   box-shadow: 0px 4px 20px var(--special-extra-white);
+
+  padding-top: 38px;
 }
 
 .hover-buttons {
   display: none;
-  padding: 38px 44px 54px 41px;
 }
 
 .popular-item:hover .hover-buttons {
   display: flex;
   flex-direction: column;
+  width: 135px;
+  height: 86px;
+  margin-bottom: 54px;
 }
 
 .add-basket-button {
@@ -978,6 +1062,10 @@ img {
   transform: translate(86px, 8px) rotate(45deg);
 }
 
+.new-popular:hover::before {
+  transform: translate(86px, -30px) rotate(45deg);
+}
+
 .popular-image-perforator {
   background-color: var(--basic-dark-blue);
 }
@@ -988,7 +1076,7 @@ img {
 }
 
 .perforator-second-child {
-  margin-top: 29px;
+  margin-top: 28px;
   margin-bottom: 38px;
 }
 
@@ -998,7 +1086,7 @@ img {
 }
 
 .perforator-fourth-child {
-  margin-top: 29px;
+  margin-top: 28px;
   margin-bottom: 38px;
 }
 
@@ -1394,11 +1482,31 @@ img {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
   width: 940px;
 }
 
 .breadcrumbs-item {
-  margin: 0 40px 0 0;
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs-item::after {
+  content: url("../img/icon-right-small.svg");
+  width: 8px;
+  height: 12px;
+  position: absolute;
+  top: 1px;
+  right: -25px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-current::after {
+  display: none;
 }
 
 .breadcrumbs-link,
@@ -1411,6 +1519,10 @@ img {
   line-height: 18px;
   color: var(--basic-black);
   text-transform: uppercase;
+}
+
+.home-icon {
+  fill: var(--home-icon-color);
 }
 
 .perforators-catalog-title {
@@ -1438,32 +1550,36 @@ img {
   grid-column: 2 / -1;
   display: flex;
   align-items: center;
-  min-height: 38px;
+  height: 38px;
+  padding-left: 19px;
 }
 
-.filters-title,
 .sorting-title {
   font-weight: normal;
 
-  margin: 0 140px 0 0;
-  padding: 0 0 0 19px;
+  margin: 0;
+  margin-right: 140px;
 }
 
-.sorting-item {
+.sorting-block {
+  display: flex;
+}
+
+.sorting-item:not(.sorting-item-dir) {
   color: var(--basic-black);
   opacity: 0.3;
 
   border-bottom: 1px dotted var(--basic-extra-red);
 }
 
-.sorting-item:hover {
+.sorting-item:hover:not(.sorting-item-dir) {
   color: var(--basic-black);
   opacity: 1;
 
   border-bottom: 1px solid var(--basic-extra-red);
 }
 
-.sorting-item.active {
+.sorting-item.active:not(.sorting-item-dir) {
   color: var(--basic-extra-red);
   opacity: 1;
   pointer-events: none;
@@ -1472,25 +1588,47 @@ img {
 }
 
 .sorting-item-price {
-  margin: 0 70px 0 0;
+  margin-right: 70px;
 }
 
 .sorting-item-type {
-  margin: 0 65px 0 0;
+  margin-right: 65px;
 }
 
 .sorting-item-functionality {
-  margin: 0 46px 0 0;
+  margin-right: 45px;
 }
 
-.sorting-item-up {
-  margin: 0 21px 0 0;
+.dir-arrows-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 45px;
+}
+
+.sorting-item-dir {
   display: inline-block;
 }
 
-.sorting-item-down {
-  margin: 0 16px 0 0;
+.sorting-item-dir {
   display: inline-block;
+}
+
+.icon-dir {
+  fill: var(--special-greylight);
+}
+
+.icon-dir.active {
+  fill: var(--basic-extra-red);
+
+  pointer-events: none;
+}
+
+.icon-dir-down {
+  transform: rotate(180deg);
+}
+
+.icon-dir:hover {
+  fill: var(--basic-black);
 }
 
 .perforators-catalog-section {
@@ -1499,7 +1637,7 @@ img {
 
 .perforators-list {
   list-style: none;
-  margin: 0 0 50px 0;
+  margin-bottom: 50px;
   padding: 0;
   display: grid;
   gap: 20px;
@@ -1518,6 +1656,26 @@ img {
 
 .perforator-item:hover {
   box-shadow: 0px 4px 20px var(--special-extra-white);
+
+  padding-top: 38px;
+}
+
+.perforator-item:hover .hover-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 54px;
+}
+
+.perforator-item:hover .perforator-image {
+  display: none;
+}
+
+.new-catalog-perforators::before {
+  transform: translate(86px, 8px) rotate(45deg);
+}
+
+.new-catalog-perforators:hover::before {
+  transform: translate(86px, -30px) rotate(45deg);
 }
 
 .catalog-perforator-first-child,
@@ -1532,7 +1690,7 @@ img {
 .catalog-perforator-sixth-child,
 .catalog-perforator-seventh-child,
 .catalog-perforator-ninth-child {
-  margin: 29px 0 38px 0;
+  margin: 28px 0 38px 0;
 }
 
 .card-title {
