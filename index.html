@@ -13,7 +13,7 @@
           <a class="main-header-logo">
             <img class="logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
           </a>
-          <div class="search-icon-wrap">
+          <form class="search-form">
             <input class="search-field" type="search" name="search-field" placeholder="Поиск:">
             <span class="search-icon-container">
               <svg class="search-icon"
@@ -37,7 +37,7 @@
                 />
               </svg>
             </span>
-          </div>
+          </form>
           <a class="bookmarks" href="#">Закладки: 0</a>
           <a class="cart" href="#">Корзина: 0</a>
           <a class="ordering" href="#">Оформить заказ</a>
@@ -141,7 +141,7 @@
                 Соседям на радость!
               </p>
             </div>
-            <a class="carousel-link" href="catalog.html">Открыть каталог</a>
+            <a class="carousel-link" href="perforators.html">Открыть каталог</a>
           </div>
           <div class="carousel-item current-slide">
             <div class="b-title-wrap">
@@ -150,7 +150,7 @@
                 Настоящие мужские игрушки
               </p>
             </div>
-            <a class="carousel-link" href="catalog.html">Открыть каталог</a>
+            <a class="carousel-link" href="perforators.html">Открыть каталог</a>
           </div>
           <div class="buttons-wrap">
             <button class="carousel-button" type="button" aria-label="Первый слайд"></button>
@@ -485,7 +485,7 @@
             </div>
             <div class="develop">
               <span class="develop-text">Разработано —</span>
-              <a class="develop-site" href="https://htmlacademy.ru">htmlacademy.ru</a>
+              <a class="develop-site" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
             </div>
           </div>
         </div>
@@ -493,14 +493,67 @@
     </footer>
     <section class="modal modal-feedback">
       <h2 class="modal-feedback-title visually-hidden">Пишите нам</h2>
-      <!--здесь будет форма-->
-      <button class="modal-close" type="button">закрыть</button>
-      <button class="modal-send" type="button">отправить</button>
+      <form class="feedback-forms feedback-forms-container">
+        <div class="feedback-contacts-flex">
+          <div class="name-field-wrap">
+            <label class="name-label" for="name-id">Ваше имя:</label><br>
+            <input class="name-field" type="text" name="name-field" id="name-id" placeholder="Имя Фамилия">
+          </div>
+          <div class="email-field-wrap">
+            <label class="email-label" for="email-id">Ваш e-mail:</label><br>
+            <input class="email-field" type="email" name="email-field" id="email-id" placeholder="email@example.com">
+          </div>
+        </div>
+        <div class="feedback-area-wrap">
+          <label class="feedback-area-label">Текст письма:</label><br>
+          <textarea class="feedback-area" name="feedback-area" id="feedback-area-id" cols="62" rows="5" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="b-feedback-button">
+            <button class="modal-send" type="button">отправить</button>
+        </div>
+      </form>
+      <button class="modal-close feedback-modal-close" type="button" aria-label="Закрыть окно с обратной связью">
+        <svg class="icon-close"
+             width="21"
+             height="21"
+             viewBox="0 0 21 21"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <path
+             d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+             fill="#EE3643"
+          />
+        </svg>
+      </button>
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <!--здесь будет карта-->
-      <button class="modal-close" type="button">закрыть</button>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123625!2d30.3208946155902!3d59.93879686904851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1602252013900!5m2!1sen!2sru"
+        width="943"
+        height="449"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        title="Магазин по адресу Большая Конюшенная, д.19"
+        aria-hidden="false"
+        tabindex="0">
+      </iframe>
+      <button class="modal-close" type="button" aria-label="Закрыть карту">
+        <svg class="icon-close"
+             width="21"
+             height="21"
+             viewBox="0 0 21 21"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <path
+             d="M13.273 10.5L20.695 3.07799C21.084 2.68899 21.084 2.05299 20.695 1.66399L19.336 0.304995C18.947 -0.0840054 18.311 -0.0840054 17.922 0.304995L10.5 7.72699L3.07799 0.304995C2.68899 -0.0840054 2.05299 -0.0840054 1.66399 0.304995L0.304995 1.66399C-0.0840054 2.05299 -0.0840054 2.68899 0.304995 3.07799L7.72699 10.5L0.305995 17.922C-0.0830054 18.311 -0.0830054 18.947 0.305995 19.336L1.66499 20.695C2.05399 21.084 2.68999 21.084 3.07899 20.695L10.501 13.273L17.923 20.695C18.312 21.084 18.948 21.084 19.337 20.695L20.696 19.336C21.085 18.947 21.085 18.311 20.696 17.922L13.273 10.5Z"
+             fill="#EE3643"
+          />
+        </svg>
+      </button>
     </section>
   </body>
 </html>
