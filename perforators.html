@@ -13,10 +13,10 @@
           <a class="main-header-logo perforators-header-logo" href="index.html">
             <img class="logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
           </a>
-          <div class="search-icon-wrap">
-            <input class="search-field" type="search" name="search-field" placeholder="Поиск:">
+          <form class="search-form">
+            <input class="search-field" type="search" name="search-field" placeholder="Поиск:" aria-label="Поиск по сайту">
             <span class="search-icon-container">
-              <svg class="search-icon"
+              <svg class="search-icon" aria-hidden="true" focusable="false"
                 width="17"
                 height="17"
                 viewBox="0 0 17 17"
@@ -37,7 +37,7 @@
                 />
               </svg>
             </span>
-          </div>
+          </form>
           <a class="bookmarks b-catalog-bookmarks" href="#">Закладки: 0</a>
           <a class="cart b-catalog-cart" href="#">Корзина: 10</a>
           <a class="ordering" href="#">Оформить заказ</a>
@@ -59,7 +59,7 @@
               <div class="private-name-wrap">
                 <a class="private-name" href="blank.html">Равшан Джамшутович</a>
                 <span class="user-icon-container">
-                  <svg class="user-icon"
+                  <svg class="user-icon" aria-hidden="true" focusable="false"
                     width="20"
                     height="18"
                     fill="none"
@@ -70,8 +70,8 @@
                   </svg>
                 </span>
               </div>
-              <a class="exit-button" href="blank.html">
-                <svg class="logout-icon"
+              <a class="exit-button" href="blank.html" aria-label="Выход из личного кабинета">
+                <svg class="logout-icon"  aria-hidden="true" focusable="false"
                   width="20"
                   height="17"
                   fill="none"
@@ -122,8 +122,8 @@
     <main>
       <ul class="breadcrumbs container">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="index.html">
-            <svg class="home-icon"
+          <a class="breadcrumbs-link" href="index.html" aria-label="Главная страница">
+            <svg class="home-icon" aria-hidden="true" focusable="false"
               width="14"
               height="12"
               fill="none"
@@ -144,7 +144,7 @@
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="blank.html">Инструмент</a>
         </li>
-        <li class="breadcrumbs-item breadcrumbs-current">
+        <li class="breadcrumbs-item breadcrumbs-current" aria-current="page">
           <a class="breadcrumbs-link">Перфораторы</a>
         </li>
       </ul>
@@ -161,8 +161,8 @@
             <a class="sorting-item sorting-item-type" href="#">По типу</a>
             <a class="sorting-item sorting-item-functionality" href="#">По функционалу</a>
             <div class="dir-arrows-wrap">
-              <a class="sorting-item sorting-item-dir" href="#">
-                <svg class="icon-dir icon-dir-up active"
+              <a class="sorting-item sorting-item-dir" href="#" aria-label="Сортировка по возрастанию">
+                <svg class="icon-dir icon-dir-up active" aria-hidden="true" focusable="false"
                   width="11"
                   height="10"
                   viewBox="0 0 11 10"
@@ -174,8 +174,8 @@
                   />
                 </svg>
               </a>
-              <a class="sorting-item sorting-item-dir" href="#">
-                <svg class="icon-dir icon-dir-down"
+              <a class="sorting-item sorting-item-dir" href="#" aria-label="Сортировка по убыванию">
+                <svg class="icon-dir icon-dir-down" aria-hidden="true" focusable="false"
                   width="11"
                   height="10"
                   viewBox="0 0 11 10"
@@ -382,8 +382,8 @@
           </p>
           <ul class="socials-list">
             <li class="social-item">
-              <a class="social-button" href="https://vk.com">
-                <svg class="vk-icon"
+              <a class="social-button" href="https://vk.com" aria-label="Мы в Вконтакте">
+                <svg class="vk-icon"  aria-hidden="true" focusable="false"
                   width="26"
                   height="15"
                   viewBox="0 0 26 15"
@@ -432,8 +432,8 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-button" href="https://facebook.com">
-                <svg class="fb-icon"
+              <a class="social-button" href="https://facebook.com" aria-label="Мы в Фейсбуке">
+                <svg class="fb-icon"  aria-hidden="true" focusable="false"
                   width="12"
                   height="22"
                   viewBox="0 0 12 22"
@@ -448,8 +448,8 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-button" href="https://instagram.com">
-                <svg class="inst-icon"
+              <a class="social-button" href="https://instagram.com" aria-label="Мы в Инстаграме"
+                <svg class="inst-icon"  aria-hidden="true" focusable="false"
                   width="21"
                   height="21"
                   viewBox="0 0 21 21"
