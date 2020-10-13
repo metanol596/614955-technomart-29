@@ -13,44 +13,46 @@
           <a class="main-header-logo perforators-header-logo" href="index.html">
             <img class="logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
           </a>
-          <form class="search-form">
-            <input class="search-field" type="search" name="search-field" placeholder="Поиск:" aria-label="Поиск по сайту">
-            <span class="search-icon-container">
-              <svg class="search-icon" aria-hidden="true" focusable="false"
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+          <div class="inner-row-container">
+            <form class="search-form">
+              <input class="search-field" type="search" name="search-field" placeholder="Поиск:" aria-label="Поиск по сайту">
+              <span class="search-icon-container">
+                <svg class="search-icon" aria-hidden="true" focusable="false"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
 
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M13.458 12.044L17 15.586L15.586 17L12.044
-                     13.458C10.782 14.421 9.21 15 7.5 15C3.35786
-                     15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5
-                     0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309
-                     14.4581 10.7403 13.458 12.044ZM7.5 2C4.467
-                     2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967
-                     7.5 13C10.532 13 13 10.532 13 7.5C13 4.467
-                     10.532 2 7.5 2Z"
-                />
-              </svg>
-            </span>
-          </form>
-          <a class="bookmarks b-catalog-bookmarks" href="#">Закладки: 0</a>
-          <a class="cart b-catalog-cart" href="#">Корзина: 10</a>
-          <a class="ordering" href="#">Оформить заказ</a>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.458 12.044L17 15.586L15.586 17L12.044
+                       13.458C10.782 14.421 9.21 15 7.5 15C3.35786
+                       15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5
+                       0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309
+                       14.4581 10.7403 13.458 12.044ZM7.5 2C4.467
+                       2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967
+                       7.5 13C10.532 13 13 10.532 13 7.5C13 4.467
+                       10.532 2 7.5 2Z"
+                  />
+                </svg>
+              </span>
+            </form>
+            <a class="bookmarks b-catalog-bookmarks" href="#">Закладки: 0</a>
+            <a class="cart b-catalog-cart" href="#">Корзина: 10</a>
+            <a class="ordering" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="header-flex-container">
-        <div class="container header-inner-container">
+        <div class="container header-inner-container header-inner-containercatalog">
           <p class="site-description-text site-description-text-catalog">
             Интернет-магазин
             строительных материалов
             и&nbsp;инструментов для ремонта
           </p>
-          <div class="header-contacts-block">
+          <div class="header-contacts-block header-contacts-block-catalog">
             <a class="header-contacts-phone" href="tel:78125550555">+7 (812) 555-05-55</a>
             <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
@@ -148,11 +150,76 @@
           <a class="breadcrumbs-link">Перфораторы</a>
         </li>
       </ul>
-      <h2 class="section-title perforators-catalog-title container">Перфораторы</h2>
+      <div class="catalog-title-wrap container">
+        <h2 class="section-title perforators-catalog-title">Перфораторы</h2>
+      </div>
       <div class="catalog-wrapper container">
         <div class="filters">
-          <h3 class="filters-title">Фильтр:</h3>
-          <!--Здесь фильтр-->
+          <div class="filters-title-container">
+            <h3 class="filters-title">Фильтр:</h3>
+          </div>
+          <form class="catalog-filter" method="GET">
+            <fieldset class="filter-item price-range">
+              <legend class="filter-legend">цена:</legend>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input class="number-field number-field-min" type="number" name="min-price" value="0">
+                  </label>
+                  <span>&ndash;</span>
+                  <label class="max-price">
+                    <input class="number-field number-field-max" type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-item checkbox-producers">
+              <legend class="filter-legend">производители:</legend>
+              <ul class="checkbox-list">
+                <li class="checkbox-item">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="bosh" id="filter-bosh" checked>
+                  <label for="filter-bosh">bosh</label>
+                </li>
+                <li class="checkbox-item">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="interskol" id="filter-interskol">
+                  <label for="filter-interskol">интерскол</label>
+                </li>
+                <li class="checkbox-item">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label for="filter-makita">makita</label>
+                </li>
+                <li class="checkbox-item">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label for="filter-dewalt">dewalt</label>
+                </li>
+                <li class="checkbox-item">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label for="filter-hitachi">hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filter-item radio-batteries">
+              <legend class="filter-legend">питание:</legend>
+              <ul class="radio-list">
+                <li class="radio-item">
+                  <input class="visually-hidden radio-input" type="radio" name="rechargeable-batteries" id="rechargeable-batteries" checked>
+                  <label for="rechargeable-batteries">аккумуляторные</label>
+                </li>
+                <li class="radio-item">
+                  <input class="visually-hidden radio-input" type="radio" name="mains-batteries" id="mains-batteries">
+                  <label for="mains-batteries">сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filter-button" type="submit">показать</button>
+          </form>
         </div>
         <div class="sorting">
           <h3 class="sorting-title">Сортировка:</h3>

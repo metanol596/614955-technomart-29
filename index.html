@@ -13,34 +13,36 @@
           <a class="main-header-logo">
             <img class="logo-img" src="img/logo-technomart.svg" width="108" height="18" alt="Логотип сайта Техномарт">
           </a>
-          <form class="search-form">
-            <input class="search-field" type="search" name="search-field" placeholder="Поиск:" aria-label="Поиск по сайту">
-            <span class="search-icon-container">
-              <svg class="search-icon" aria-hidden="true" focusable="false"
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+          <div class="inner-row-container">
+            <form class="search-form">
+              <input class="search-field" type="search" name="search-field" placeholder="Поиск:" aria-label="Поиск по сайту">
+              <span class="search-icon-container">
+                <svg class="search-icon" aria-hidden="true" focusable="false"
+                  width="17"
+                  height="17"
+                  viewBox="0 0 17 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
 
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M13.458 12.044L17 15.586L15.586 17L12.044
-                     13.458C10.782 14.421 9.21 15 7.5 15C3.35786
-                     15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5
-                     0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309
-                     14.4581 10.7403 13.458 12.044ZM7.5 2C4.467
-                     2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967
-                     7.5 13C10.532 13 13 10.532 13 7.5C13 4.467
-                     10.532 2 7.5 2Z"
-                />
-              </svg>
-            </span>
-          </form>
-          <a class="bookmarks" href="#">Закладки: 0</a>
-          <a class="cart" href="#">Корзина: 0</a>
-          <a class="ordering" href="#">Оформить заказ</a>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.458 12.044L17 15.586L15.586 17L12.044
+                       13.458C10.782 14.421 9.21 15 7.5 15C3.35786
+                       15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5
+                       0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309
+                       14.4581 10.7403 13.458 12.044ZM7.5 2C4.467
+                       2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967
+                       7.5 13C10.532 13 13 10.532 13 7.5C13 4.467
+                       10.532 2 7.5 2Z"
+                  />
+                </svg>
+              </span>
+            </form>
+            <a class="bookmarks" href="#">Закладки: 0</a>
+            <a class="cart" href="#">Корзина: 0</a>
+            <a class="ordering" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="header-flex-container">
@@ -119,22 +121,33 @@
           <h3 class="offer-title">Техника</h3>
           <a class="subtitle-link" href="blank.html">Для стройки</a>
         </div>
-        <div class="offer-item new">
+        <div class="offer-item light-green new">
           <h3 class="offer-title">Скидки 50%</h3>
           <a class="subtitle-link" href="blank.html">На 350 товаров</a>
         </div>
-        <div class="offer-item new">
+        <div class="offer-item light-yellow new">
           <h3 class="offer-title">Доставка</h3>
           <a class="subtitle-link" href="blank.html">Бесплатно</a>
         </div>
-        <div class="carousel carousel-wrapper-2">
-          <button class="control-left-button" type="button" aria-label="Прокрутка слайдра влео">
-            <img class="carousel-left-icon" src="img/icon-left.svg" width="22" height="40" alt="Прокрутка слайдера влево">
-          </button>
-          <button class="control-right-button" type="button" aria-label="Прокрутка слайдра вправо">
-            <img class="carousel-right-icon" src="img/icon-right.svg" width="22" height="40" alt="Прокрутка слайдера вправо">
-          </button>
+        <div class="carousel">
+          <div class="carousel-controls">
+            <button class="control-left-button" type="button" aria-label="Прокрутка слайдра влео">
+              <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.9243 0.941406L21.9225 2.98921L4.90696 20.436L21.978 37.9375L19.9789 39.9853L0.910609 20.436L19.9243 0.941406Z" fill="white"/>
+              </svg>
+            </button>
+            <button class="control-right-button" type="button" aria-label="Прокрутка слайдра вправо">
+              <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.07568 39.0586L0.0775051 37.0108L17.0931 19.564L0.0220261 2.06249L2.02116 0.0146904L21.0894 19.564L2.07568 39.0586Z" fill="white"/>
+              </svg>
+            </button>
+          </div>
+          <div class="buttons-wrap carousel-pagination">
+            <button class="carousel-button" type="button" aria-label="Первый слайд"></button>
+            <button class="carousel-button active current" type="button" aria-label="Второй слайд"></button>
+          </div>
           <div class="carousel-item">
+            <img src="img/drills-catalog.png" width="620" height="266" alt="Картинка с человеком с дрелью">
             <div class="b-title-wrap">
               <h3 class="carousel-title">Дрели</h3>
               <p class="carousel-subtitle">
@@ -143,7 +156,8 @@
             </div>
             <a class="carousel-link" href="perforators.html">Открыть каталог</a>
           </div>
-          <div class="carousel-item current-slide">
+          <div class="carousel-item active">
+            <img src="img/perforators-catalog.png" width="620" height="266" alt="Картинка с человеком с перфоратором">
             <div class="b-title-wrap">
               <h3 class="carousel-title">Перфораторы</h3>
               <p class="carousel-subtitle">
@@ -151,10 +165,6 @@
               </p>
             </div>
             <a class="carousel-link" href="perforators.html">Открыть каталог</a>
-          </div>
-          <div class="buttons-wrap">
-            <button class="carousel-button" type="button" aria-label="Первый слайд"></button>
-            <button class="carousel-button active current" type="button" aria-label="Второй слайд"></button>
           </div>
         </div>
       </section>
@@ -288,8 +298,8 @@
               <p class="slider-item-description slider-item-delivery">
                 Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо
                 к&nbsp;вашему подъезду совершенно бесплатно!
-                Ведь мы&nbsp;неплохо заработаем,<br>
-                поднимая&nbsp;его на&nbsp;ваш этаж!
+                Ведь мы&nbsp;неплохо заработаем,
+                поднимая&nbsp;его&nbsp;на&nbsp;ваш&nbsp;этаж!
               </p>
             </div>
             <div class="slider-item slider-wrapper-guarantee">
@@ -367,12 +377,6 @@
             </li>
             <li class="footer-navigation-item">
               <a class="footer-navigation-link white" href="blank.html">Доставка</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-navigation-link white" href="blank.html">Контакты</a>
-            </li>
-            <li class="footer-navigation-item">
-              <a class="footer-navigation-link white" href="blank.html">Контакты</a>
             </li>
             <li class="footer-navigation-item">
               <a class="footer-navigation-link white" href="blank.html">Контакты</a>
