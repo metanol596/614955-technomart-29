@@ -243,7 +243,7 @@ img {
 
   border: none;
   width: 228px;
-  outline: 0;
+  outline: none;
   outline-offset: 0;
   order: 1;
 }
@@ -297,8 +297,7 @@ img {
   opacity: 1;
 }
 
-.perforators-header-logo,
-.perforators-footer-logo {
+.perforators-header-logo {
   pointer-events: all;
 }
 
@@ -869,12 +868,6 @@ img {
   background-color: transparent;
 
   border: none;
-}
-
-.control-right-button:focus,
-.control-left-button:focus,
-.carousel-button:focus {
-  outline: none;
 }
 
 .carousel-item {
@@ -1571,18 +1564,7 @@ img {
 
 .breadcrumbs-item {
   position: relative;
-}
-
-.breadcrumbs-item:first-of-type {
   margin-right: 41px;
-}
-
-.breadcrumbs-item:nth-of-type(2) {
-  margin-right: 40px;
-}
-
-.breadcrumbs-item:nth-of-type(3) {
-  margin-right: 42px;
 }
 
 .breadcrumbs-item::after {
@@ -1838,6 +1820,11 @@ img {
   border: none;
 
   background-image: url("../img/checkbox-on-darker.svg");
+}
+
+.checkbox-input:focus + label::before,
+.radio-input:focus + label::before {
+  outline: 1px solid;
 }
 
 .radio-batteries {
@@ -2198,6 +2185,10 @@ img {
   background-color: var(--basic-extra-red);
   background-size: 220px 68px;
   box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.perforators-footer-logo {
+  pointer-events: all;
 }
 
 .footer-logo-img {

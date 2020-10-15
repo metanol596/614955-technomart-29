@@ -158,7 +158,7 @@
           <div class="filters-title-container">
             <h3 class="filters-title">Фильтр:</h3>
           </div>
-          <form class="catalog-filter" method="GET" target="_blank">
+          <form class="catalog-filter" method="GET" action="https://echo.htmlacademy.ru/" target="_blank">
             <fieldset class="filter-item price-range">
               <legend class="filter-legend">цена:</legend>
               <div class="range-filter">
@@ -184,23 +184,23 @@
               <legend class="filter-legend">производители:</legend>
               <ul class="checkbox-list">
                 <li class="checkbox-item">
-                  <input class="visually-hidden checkbox-input" type="checkbox" name="bosh" id="filter-bosh" checked>
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="producers" value="bosh" id="filter-bosh" checked>
                   <label for="filter-bosh">bosh</label>
                 </li>
                 <li class="checkbox-item">
-                  <input class="visually-hidden checkbox-input" type="checkbox" name="interskol" id="filter-interskol">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="producers" value="interskol" id="filter-interskol">
                   <label for="filter-interskol">интерскол</label>
                 </li>
                 <li class="checkbox-item">
-                  <input class="visually-hidden checkbox-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="producers" value="makita" id="filter-makita" checked>
                   <label for="filter-makita">makita</label>
                 </li>
                 <li class="checkbox-item">
-                  <input class="visually-hidden checkbox-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="producers" value="dewalt" id="filter-dewalt">
                   <label for="filter-dewalt">dewalt</label>
                 </li>
                 <li class="checkbox-item">
-                  <input class="visually-hidden checkbox-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <input class="visually-hidden checkbox-input" type="checkbox" name="producers" value="hitachi" id="filter-hitachi">
                   <label for="filter-hitachi">hitachi</label>
                 </li>
               </ul>
@@ -209,11 +209,13 @@
               <legend class="filter-legend">питание:</legend>
               <ul class="radio-list">
                 <li class="radio-item">
-                  <input class="visually-hidden radio-input" type="radio" name="batteries" id="rechargeable-batteries" value="rechargeable-batteries" checked>
+                  <input class="visually-hidden radio-input" type="radio" name="power" id="rechargeable-batteries" value="cordless-rotary-hammers
+                  " checked>
                   <label for="rechargeable-batteries">аккумуляторные</label>
                 </li>
                 <li class="radio-item">
-                  <input class="visually-hidden radio-input" type="radio" name="batteries" id="mains-batteries" value="mains-batteries">
+                  <input class="visually-hidden radio-input" type="radio" name="power" id="mains-batteries" value="network-punchers
+                  ">
                   <label for="mains-batteries">сетевые</label>
                 </li>
               </ul>
@@ -419,7 +421,7 @@
     <footer class="main-footer">
       <div class="container main-footer-wrap">
         <div class="main-footer-container">
-          <a class="footer-logo">
+          <a class="footer-logo perforators-footer-logo" href="index.html">
             <img class="footer-logo-img" src="img/logo-technomart2.svg" width="138" height="23" alt="Логотип сайта Техномарт">
           </a>
           <div class="footer-contacts-block">
@@ -469,7 +471,7 @@
           </p>
           <ul class="socials-list">
             <li class="social-item">
-              <a class="social-button" href="https://vk.com" aria-label="Мы в Вконтактн">
+              <a class="social-button" href="https://vk.com" target="_blank" aria-label="Мы в Вконтактн">
                 <svg class="vk-icon" aria-hidden="true" focusable="false"
                   width="26"
                   height="15"
@@ -519,7 +521,7 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-button" href="https://facebook.com" aria-label="Мы в Фейсбуке">
+              <a class="social-button" href="https://facebook.com" target="_blank" aria-label="Мы в Фейсбуке">
                 <svg class="fb-icon" aria-hidden="true" focusable="false"
                   width="12"
                   height="22"
@@ -535,7 +537,7 @@
               </a>
             </li>
             <li class="social-item">
-              <a class="social-button" href="https://instagram.com" aria-label="Мы в Инстаграме">
+              <a class="social-button" href="https://instagram.com" target="_blank" aria-label="Мы в Инстаграме">
                 <svg class="inst-icon" aria-hidden="true" focusable="false"
                   width="21"
                   height="21"
@@ -580,13 +582,13 @@
             <path d="M49.641 21.066C49.2498 20.6773 48.6181 20.6773 48.227 21.066L29.788 39.504C29.3968 39.8928 28.7651 39.8928 28.374 39.504L20.234 31.365C19.8428 30.9763 19.2111 30.9763 18.82 31.365L15.285 34.9C14.8962 35.2912 14.8962 35.9228 15.285 36.314L28.374 49.404C28.7651 49.7928 29.3968 49.7928 29.788 49.404L33.324 45.868L34.738 44.454L53.176 26.016C53.5647 25.6248 53.5647 24.9932 53.176 24.602L49.641 21.066Z" fill="white"/>
           </svg>
         </span>
-        <b class="add-success">Товар добавлен в корзину!</b>
+        <h2 class="add-success">Товар добавлен в корзину!</h2>
       </div>
       <div class="modal-lower-wrap">
         <a class="ordering-modal-link" href="blank.html">оформить заказ</a>
         <button class="modal-close-button">продолжить покупки</button>
       </div>
-      <button class="modal-close feedback-modal-close" type="button" aria-label="Закрыть окно с обратной связью">
+      <button class="modal-close feedback-modal-close" type="button" aria-label="Закрыть модальное окно с уведомлением о добавлении товара в корзину">
         <svg class="icon-close"
              width="21"
              height="21"
