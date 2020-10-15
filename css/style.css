@@ -2480,8 +2480,6 @@ img {
   background-color: var(--basic-extra-red);
 
   color: var(--basic-white);
-  outline: none;
-  outline-offset: 0;
   font-size: 14px;
   font-weight: 400;
   text-transform: uppercase;
