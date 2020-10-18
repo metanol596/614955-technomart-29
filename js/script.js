@@ -1,4 +1,4 @@
-'use strict'
+
 // map modal
 const popupMap = document.querySelector('.modal-map');
 const openPopupButtonMap = document.querySelector('.button-open-map');
@@ -22,14 +22,14 @@ window.addEventListener('keydown', function(evtMap) {
     }
   }
 });
+
 // feedback modal
-const popupFeedback = document.querySelector('.modal-feedback');
+let popupFeedback = document.querySelector('.modal-feedback');
 const openPopupButtonFeedback = document.querySelector('.button-open-feedback');
 const closePopupButtonFeedback = popupFeedback.querySelector('.feedback-modal-close');
 const nameField = popupFeedback.querySelector('.name-field');
 const emailField = popupFeedback.querySelector('.email-field');
 const form = popupFeedback.querySelector('form');
-
 let isNameStorageSupport = true;
 let isEmailStorageSupport = true;
 let nameStorage = "";
@@ -45,7 +45,6 @@ try {
 openPopupButtonFeedback.addEventListener('click', function (evtFeedback) {
   evtFeedback.preventDefault();
   popupFeedback.classList.add('modal-show');
-
   if (nameStorage) {
     nameField.value = nameStorage;
   }
@@ -55,9 +54,18 @@ openPopupButtonFeedback.addEventListener('click', function (evtFeedback) {
   nameField.focus();
 });
 
+closePopupButtonFeedback.addEventListener('click', function (evtFeedback) {
+  evtFeedback.preventDefault();
+  popupFeedback.classList.remove('modal-show');
+  popupFeedback.classList.remove('modal-error');
+});
+
 form.addEventListener('submit', function (evtFeedback) {
   if (!nameField.value || !emailField.value) {
     evtFeedback.preventDefault();
+    popupFeedback.classList.remove('modal-error');
+    popupFeedback.offsetWidth = popupFeedback.offsetWidth;
+    popupFeedback.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
       localStorage.setItem('name', nameField.value);
@@ -66,16 +74,12 @@ form.addEventListener('submit', function (evtFeedback) {
   }
 });
 
-closePopupButtonFeedback.addEventListener('click', function (evtFeedback) {
-  evtFeedback.preventDefault();
-  popupFeedback.classList.remove('modal-show');
-});
-
 window.addEventListener('keydown', function(evtFeedback) {
   if (evtFeedback.key === 'Escape') {
     if (popupFeedback.classList.contains('modal-show')) {
       evtFeedback.preventDefault();
       popupFeedback.classList.remove('modal-show');
+      popupFeedback.classList.remove('modal-error');
     }
   }
 });
