@@ -24,7 +24,7 @@ window.addEventListener('keydown', function(evtMap) {
 });
 
 // feedback modal
-let popupFeedback = document.querySelector('.modal-feedback');
+const popupFeedback = document.querySelector('.modal-feedback');
 const openPopupButtonFeedback = document.querySelector('.button-open-feedback');
 const closePopupButtonFeedback = popupFeedback.querySelector('.feedback-modal-close');
 const nameField = popupFeedback.querySelector('.name-field');
