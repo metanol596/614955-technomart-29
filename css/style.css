@@ -2379,6 +2379,27 @@ img {
   background-color: transparent;
 }
 
+.modal-map {
+  width: 943px;
+  height: 449px;
+  z-index: 100;
+  display: none;
+
+  box-shadow: var(--special-extra-white);
+}
+
+.modal-map::before {
+  content: "";
+  position: absolute;
+  width: 943px;
+  height: 7px;
+  top: 0;
+  left: 0;
+
+  background-color: var(--basic-extra-red);
+  background-size: 943px 7px;
+}
+
 .modal-feedback {
   width: 620px;
   height: 430px;
@@ -2501,33 +2522,17 @@ img {
   background-color: var(--special-darker-red);
 }
 
-.modal-map {
-  width: 943px;
-  height: 449px;
-  z-index: 100;
-  display: none;
-
-  box-shadow: var(--special-extra-white);
-}
-
-.modal-map::before {
-  content: "";
-  position: absolute;
-  width: 943px;
-  height: 7px;
-  top: 0;
-  left: 0;
-
-  background-color: var(--basic-extra-red);
-  background-size: 943px 7px;
-}
-
 .modal-cart {
   width: 620px;
   height: 282px;
   padding-top: 55px;
   z-index: 200;
   display: none;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-cart::before {
@@ -2595,4 +2600,24 @@ img {
   text-transform: uppercase;
 
   background-color: var(--basic-white);
+}
+
+/* animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(-30px);
+  }
+
+  90% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
