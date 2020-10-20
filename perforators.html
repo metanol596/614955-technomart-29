@@ -6,7 +6,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <div class="header-row-container">
         <div class="container header-inner-wrap">
@@ -58,8 +58,7 @@
           </div>
           <div class="catalog-header-fields">
             <div class="private-block">
-              <div class="private-name-wrap">
-                <a class="private-name" href="blank.html">Равшан Джамшутович</a>
+              <a class="private-name-wrap" href="blank.html">
                 <span class="user-icon-container">
                   <svg class="user-icon" aria-hidden="true" focusable="false"
                     width="20"
@@ -71,7 +70,8 @@
                     />
                   </svg>
                 </span>
-              </div>
+                <p class="private-name">Равшан Джамшутович</p>
+              </a>
               <a class="exit-button" href="blank.html" aria-label="Выход из личного кабинета">
                 <svg class="logout-icon"  aria-hidden="true" focusable="false"
                   width="20"
@@ -266,7 +266,7 @@
           <ul class="perforators-list">
             <li class="perforator-item new new-catalog-perforators">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -280,7 +280,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -294,7 +294,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators new-current">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -308,7 +308,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators new-current">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -322,7 +322,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -336,7 +336,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators new-current">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -350,7 +350,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators new-current">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -364,7 +364,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -378,7 +378,7 @@
             </li>
             <li class="perforator-item new new-catalog-perforators new-current">
               <div class="hover-buttons">
-                <a class="add-basket-button" href="#">купить</a>
+                <a class="add-basket-button" href="blank.html">купить</a>
                 <a class="add-bookmark-button" href="#">в закладки</a>
               </div>
               <div class="catalog-img-wrap">
@@ -586,9 +586,9 @@
       </div>
       <div class="modal-lower-wrap">
         <a class="ordering-modal-link" href="blank.html">оформить заказ</a>
-        <button class="modal-close-button">продолжить покупки</button>
+        <button class="cart-modal-close modal-close-button" type="button">продолжить покупки</button>
       </div>
-      <button class="modal-close feedback-modal-close" type="button" aria-label="Закрыть модальное окно с уведомлением о добавлении товара в корзину">
+      <button class="modal-close cart-modal-close" type="button" aria-label="Закрыть модальное окно с уведомлением о добавлении товара в корзину">
         <svg class="icon-close"
              width="21"
              height="21"
@@ -603,5 +603,6 @@
         </svg>
       </button>
     </section>
+    <script src="js/popupCart.min.js"></script>
   </body>
 </html>

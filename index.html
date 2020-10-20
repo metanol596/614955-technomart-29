@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -131,22 +131,22 @@
         </div>
         <div class="carousel">
           <div class="carousel-controls">
-            <button class="control-left-button" type="button" aria-label="Прокрутка слайдра влео">
+            <button class="prev-control-button" type="button" aria-label="Прокрутка слайдра влео">
               <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.9243 0.941406L21.9225 2.98921L4.90696 20.436L21.978 37.9375L19.9789 39.9853L0.910609 20.436L19.9243 0.941406Z" fill="white"/>
               </svg>
             </button>
-            <button class="control-right-button" type="button" aria-label="Прокрутка слайдра вправо">
+            <button class="next-control-button" type="button" aria-label="Прокрутка слайдра вправо">
               <svg width="22" height="40" viewBox="0 0 22 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.07568 39.0586L0.0775051 37.0108L17.0931 19.564L0.0220261 2.06249L2.02116 0.0146904L21.0894 19.564L2.07568 39.0586Z" fill="white"/>
               </svg>
             </button>
           </div>
           <div class="buttons-wrap carousel-pagination">
-            <button class="carousel-button" type="button" aria-label="Первый слайд"></button>
-            <button class="carousel-button active current" type="button" aria-label="Второй слайд"></button>
+            <button class="carousel-button current" type="button" aria-label="Первый слайд"></button>
+            <button class="carousel-button" type="button" aria-label="Второй слайд"></button>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item active">
             <img src="img/drills-catalog.png" width="620" height="266" alt="Картинка с человеком с дрелью">
             <div class="b-title-wrap">
               <h3 class="carousel-title">Дрели</h3>
@@ -156,7 +156,7 @@
             </div>
             <a class="carousel-link" href="perforators.html">Открыть каталог</a>
           </div>
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <img src="img/perforators-catalog.png" width="620" height="266" alt="Картинка с человеком с перфоратором">
             <div class="b-title-wrap">
               <h3 class="carousel-title">Перфораторы</h3>
@@ -293,8 +293,8 @@
               <button class="slider-button" type="button">Гарантия</button>
               <button class="slider-button" type="button">Кредит</button>
             </div>
-            <div class="slider-item current-slide  slider-wrapper-delivery">
-              <h3 class="slider-item-title">Доставка</h3>
+            <div class="slider-item active  slider-wrapper-delivery">
+              <h3 class="slider-item-title delivery">Доставка</h3>
               <p class="slider-item-description slider-item-delivery">
                 Мы&nbsp;с&nbsp;удовольствием доставим ваш товар прямо
                 к&nbsp;вашему подъезду совершенно бесплатно!
@@ -303,7 +303,7 @@
               </p>
             </div>
             <div class="slider-item slider-wrapper-guarantee">
-              <h3 class="slider-item-title">Гарантия</h3>
+              <h3 class="slider-item-title guarantee">Гарантия</h3>
               <p class="slider-item-description slider-item-guarantee">
                 Если купленный у нас товар поломается или заискрит,
                 а&nbsp;также в случае пожара, спровоцированного его
@@ -313,7 +313,7 @@
               </p>
             </div>
             <div class="slider-item slider-wrapper-credits">
-              <h3 class="slider-item-title">Кредит</h3>
+              <h3 class="slider-item-title credits">Кредит</h3>
               <p class="slider-item-description slider-item-credit">
                 Залезть в долговую яму стало проще!
                 Кредитные консультанты придут вам на помощь.
@@ -572,7 +572,7 @@
         </svg>
       </button>
     </section>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
 
