@@ -354,7 +354,7 @@ img {
   height: 16px;
   left: 20px;
 
-  background-image: url("../img/icon-bookmark.svg");
+  background-image: url("/img/icon-bookmark.svg");
 }
 
 .cart::before {
@@ -362,7 +362,7 @@ img {
   height: 15px;
   left: 26px;
 
-  background-image: url("../img/icon-cart.svg");
+  background-image: url("/img/icon-cart.svg");
 }
 
 .b-catalog-cart::before {
@@ -1797,7 +1797,7 @@ img {
   padding-right: 20px;
   position: relative;
 
-  background-image: url("../img/bitmap.png");
+  background-image: url("../img/Bitmap.png");
   background-size: 220px 80px;
 }
 
